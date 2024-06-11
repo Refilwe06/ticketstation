@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="registration">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="regUsername">Username:</label>
+            <input type="text" id="regUsername" required><br>
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" required><br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div id="login" class="hidden">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" required><br>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="homepage" class="hidden">
+        <nav>
+            <img src="logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><button id="logoutButton">Logout</button></li>
+            </ul>
+        </nav>
+ <br><br><br> <br> <br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br> <br><br><br> <br> <br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br> <br><br><br> <br> <br><br><br><br><br><br><br><br><br> <br><br><br>
+
+        <div id="content">
+            <!-- Hero Section -->
+            <section id="hero">
+                <div class="hero-content">
+                    <h1>Welcome to Christ Centered Women</h1>
+                    <p>Empowering women through faith and community.</p>
+                </div>
+            </section>
+           
+            <!-- Search and Filter Section -->
+            <section id="search-filter">
+                <input type="text" id="searchInput" placeholder="Search events...">
+                <select id="filterSelect">
+                    <option value="all">All</option>
+                    <option value="free">Free</option>
+                    <option value="paid">Paid</option>
+                </select>
+            </section>
+            <br><br><br>
+            <!-- Popular Events Section -->
+            <section id="popular-events">
+                <h3>Most Popular Events</h3>
+                <div class="events-grid">
+                    <!-- Event Card 1 -->
+                    <div class="event-card" data-event-id="1" data-type="free">
+                        <img src="praise and worship.jpg" alt="Praise and Worship">
+                        <div class="event-info">
+                            <h4>Praise and Worship</h4>
+                            <p>Every Wednesday</p>
+                            <h4>Free</h4>
+                            <a href="event.html?id=1" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="event-card" data-event-id="2" data-type="paid">
+                        <img src="womens conference.jpg" alt="Womens Conference">
+                        <div class="event-info">
+                            <h4>Womens Conference</h4>
+                            <p>18 June 2024</p>
+                            <h4>Paid</h4>
+                            <a href="event.html?id=2" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="event-card" data-event-id="3" data-type="free">
+                        <img src="Womens Bible Study.jpg" alt="Bible Study">
+                        <div class="event-info">
+                            <h4>Bible Study</h4>
+                            <p>Every Saturday</p>
+                            <h4>Free</h4>
+                            <a href="event.html?id=3" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 4 -->
+                    <div class="event-card" data-event-id="4" data-type="paid">
+                        <img src="yana.jpg" alt="Two Day Retreat">
+                        <div class="event-info">
+                            <h4>Two Day Retreat</h4>
+                            <p>28 June 2024</p>
+                            <h4>Paid</h4>
+                            <a href="event.html?id=4" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 5 -->
+                    <div class="event-card" data-event-id="5" data-type="paid">
+                        <img src="womens retreat.jpg" alt="Retreat">
+                        <div class="event-info">
+                            <h4>Retreat</h4>
+                            <p>2 August 2024</p>
+                            <h4>Paid</h4>
+                            <a href="event.html?id=5" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 6 -->
+                    <div class="event-card" data-event-id="6" data-type="free">
+                        <img src="feeding program.jpg" alt="Feeding Program">
+                        <div class="event-info">
+                            <h4>Feeding Program</h4>
+                            <p>18 August 2024</p>
+                            <h4>Donate</h4>
+                            <a href="event.html?id=6" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 7 -->
+                    <div class="event-card" data-event-id="7" data-type="free">
+                        <img src="Pink White and Black Illustrative Fundraising Poster (2).jpg" alt="FunRun">
+                        <div class="event-info">
+                            <h4>FunRun</h4>
+                            <p>2 October 2024</p>
+                            <h4>Free</h4>
+                            <a href="event.html?id=7" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <!-- Duplicate Popular Events Section -->
+            <section id="duplicate-popular-events">
+                <h3>Upcoming Events</h3>
+                <div class="events-grid">
+                    <!-- Event Card 1 -->
+                    <div class="event-card" data-event-id="1" data-type="free">
+                        <img src="Mother-Daughter Faith Night_20240608_154344_0000.jpg" alt="Praise and Worship">
+                        <div class="event-info">
+                            <h4>Mother-Daughter Faith Night</h4>
+                            <p>9 August 2024</p>
+                            <h4>Paid</h4>
+                            <a href="event.html?id=1" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="event-card" data-event-id="2" data-type="paid">
+                        <img src="Peach Fruit Brunch Party Invitation Card_20240608_154817_0000.jpg" alt="Womens Conference">
+                        <div class="event-info">
+                            <h4>Prayer Breakfast</h4>
+                            <p> 4 September 2024</p>
+                            <h4>Paid</h4>
+                            <a href="event.html?id=2" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="event-card" data-event-id="3" data-type="free">
+                        <img src="Neon Trendy Minimal Women's Health and Wellness Instagram Post (3).jpg"Bible Study">
+                        <div class="event-info">
+                            <h4>Health and Wellness Retreat</h4>
+                            <p> 14 September 2024</p>
+                            <h4>Paid</h4>
+                            <a href="event.html?id=3" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 4 -->
+                    <div class="event-card" data-event-id="4" data-type="paid">
+                        <img src="Deepen Your Faith, Strengthen Your Spirit (2).jpg" alt="Two Day Retreat">
+                        <div class="event-info">
+                            <h4>Women’s Spiritual Growth Workshop</h4>
+                            <p>18 September 2024</p>
+                            <h4>Paid</h4>
+                            <a href="event.html?id=4" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 5 -->
+                    <div class="event-card" data-event-id="5" data-type="paid">
+                        <img src="Purple Floral Scripture Instagram Story (1).jpg" alt="Retreat">
+                        <div class="event-info">
+                            <h4> 30-day Bible verse challenge with weekly group check-ins</h4>
+                            <p>23 September 2024</p>
+                            <h4>Free</h4>
+                            <a href="event.html?id=5" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 6 -->
+                    <div class="event-card" data-event-id="6" data-type="free">
+                        <img src="Neutral Upcoming Events Facebook Post (2).jpg" alt="Feeding Program">
+                        <div class="event-info">
+                            <h4>Find Your Identity In Christ</h4>
+                            <p>26 September 2024</p>
+                            <h4>Free</h4>
+                            <a href="event.html?id=6" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 7 -->
+                    <div class="event-card" data-event-id="7" data-type="free">
+                        <img src="App Development Instagram Post in Yellow White Professional Gradients Style.jpg" alt="FunRun">
+                        <div class="event-info">
+                            <h4>Coding, marketing, and tech tools bootcamp for women.</h4>
+                            <p>2 October 2024</p>
+                            <a href="event.html?id=7" class="buy-button">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Past events -->
+            <section id="past-events">
+                <h3>Past Events</h3>
+                <div class="events-grid">
+                    <!-- Past Event Card 1 -->
+                    <div class="event-card" data-event-id="8" data-type="free">
+                        <img src="Untitled design.jpg" alt="Past Event 1">
+                        <div class="event-info">
+                            <h4>Leadership Summit for Women</h4>
+                            <p>Date: 1 January 2024</p>
+                            <button class="view-button" data-event-id="8">View</button>
+                        </div>
+                    </div>
+                    <!-- Past Event Card 2 -->
+                    <div class="event-card" data-event-id="9" data-type="paid">
+                        <img src="Green and Pink Illustration Mother's Day Brunch Flyer (1).jpg" alt="Past Event 2">
+                        <div class="event-info">
+                            <h4>Mothers Day Brunch</h4>
+                            <p>Date: 15 February 2024</p>
+                            <button class="view-button" data-event-id="9">View</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+            <!-- Modal for Past Event Details -->
+            <div id="pastEventModal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <div class="event-info">
+                        <h2 id="past-event-name"></h2>
+                        <p id="past-event-date"></p>
+                        <p id="past-event-time"></p>
+                        <p id="past-event-location"></p>
+                        <p id="past-event-description"></p>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <!-- Footer Section -->
+            <footer>
+                <div class="footer-content">
+                    <p>&copy; 2024 Christ Centered Women. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="filter.js"></script>
+    <script src="pastEvents.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
